@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+
+
+<body>
+<h1>Fundamentos JavaScript</h1>
+
+<script>
+   /* var hola ="Hola Mundo";
+    let hello ="Hello World";
+    console.log(hola)
+    console.log(hello)
+    console.log(window.hola)
+    //Ambito de bloque
+    //Esto en un Bloque
+/*
+console.log("***********************var********************************")
+    
+var musica ="Rock"
+    console.log("Variable Música antes del bloque",musica)
+    {
+        var musica = "Pop"
+        console.log("Variable Música dentro del bloque",musica)
+    }
+    console.log("Variable Música después del bloque",musica)
+    
+console.log("************************let*****************************")
+    
+    let musica2 ="Rock"
+    console.log("Variable Música antes del bloque",musica2)
+    {
+        let musica2 = "Pop"
+        console.log("Variable Música dentro del bloque",musica2)
+    }
+    console.log("Variable Música después del bloque",musica2) */
+
+
+    
+  /*  const PI =3.1416
+    console.log(PI)
+    //PI = 3.14
+   
+    const objeto={
+        nombre:"michi",
+        edad:25
+    }
+     
+    const colores=["ROJO","AZUL","NEGRO"]
+    
+    console.log(objeto)
+    console.log(colores)
+    
+    objeto.apellido="Melian"
+    colores.push("AMARILO")
+    
+    console.log(objeto)
+    console.log(colores)
+
+//Cadena de texto aka Strings 
+
+let nombres='Michi'
+let apellidos= 'Melian'
+let saludo=new String("Hola mima");
+let lorem = "lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis eveniet voluptatibu corrupti consequuntur ut sint explicabo facere temporibus vel nostrum corporis repellendus veniam quidem, excepturi doloremque esse. Consequuntur, consectetur sunt!";
+
+
+console.log(nombres,apellidos,saludo)
+console.log(nombres.toUpperCase(),
+nombres.toLowerCase(),
+lorem.includes("amet"),
+lorem.split(",")
+
+)
+
+//Concatenación
+
+let nombre = "Michel"
+let apellido = "Melian"
+
+let saludos = "Hola mi nombre es: " + nombre +" " + apellido + "."
+console.log(saludos)
+
+//Interpolacion de variables
+//Template String
+let saludo2 = `Hola mi nombre es ${nombre} ${apellido}`
+console.log(saludo2)
+
+
+let ul= "<ul> <li>Otoño</li> <li>Verano</li> <li>Invierno</li> </ul>"
+console.log(ul)
+
+let ul2 = `<ul>
+    <li>Invierno</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+</ul>`
+console.log(ul2)
+
+//SECCIÓN #7
+
+let a1 = 2
+let b = new Number(1)
+let c = 7.19
+let d ="5.6"
+
+
+console.log(a1,b)
+console.log(c.toFixed(1))
+console.log(c.toFixed(5))
+console.log(parseInt(c))
+console.log(parseFloat(c))
+console.log(typeof c, typeof d)
+console.log(c+d)
+console.log(c+ parseInt(d))
+console.log(c+ parseFloat(d))
+console.log(c+ Number.parseInt(d))
+console.log(c+ Number.parseFloat(d))
+
+//SECCIÓN #8
+let verdadero = true
+let falso = false
+let v = Boolean(true)
+let f = Boolean(false)
+
+
+
+
+console.log(verdadero,falso, v, f)
+console.log( typeof verdadero, typeof falso)
+
+console.log(Boolean(0))
+console.log(Boolean(-5))
+console.log(Boolean(5))
+console.log(Boolean(""))
+console.log(Boolean(" "))
+
+//SECCIÓN #9
+//undefined indica que no se ha inicializado una variable y que el valor está ausente 
+ let indefinida
+ console.log(indefinida)
+
+ //null es un valor especial que indica la ausencia de un valor
+ let nulo = null
+ console.log(nulo)
+
+ //NaN -- Not a Number
+ let noEsUnNumero ="hola" * 25.2
+ console.log(noEsUnNumero)
+
+//SECCIÓN 10
+ function estoEsUnaFuncion(){
+    console.log("Uno1")
+    console.log("Dos2")
+    console.log("Tres3")
+ }
+
+ 
+//Invocacion de  función
+ estoEsUnaFuncion()
+
+ function unaFuncionQueDevuelveValor(){
+    console.log("Uno")
+    console.log("Dos")
+    console.log("Tres")
+    return "La funcion ha retornado una Cadena de Texto"
+ }
+
+let valorDeFuncion = unaFuncionQueDevuelveValor() 
+console.log(valorDeFuncion)
+
+//let valorDeFuncion = unaFuncionQueDevuelveValor
+
+//console.log(valorDeFuncion)
+
+function saludar(nombre,edad){
+console.log(`hola mi nombre es ${nombre} y tengo ${edad} años`)
+}
+
+saludar("michi", 26)
+saludar()
+
+//Funciones declaradas VS funciones expresadas
+
+funcionDeclarada()
+
+function funcionDeclarada(){ 
+    console.log("Esto es una función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada")
+}
+
+funcionDeclarada()
+
+
+//Función anónima
+const funcionExpresada = function(){
+    console.log("Esto es una función expresada, es decir, una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá...")
+}
+ funcionExpresada()
+
+//SECCIÓN 11
+
+const A =[]
+const B =[1,true,"Hola",["E","R","T","Y"],[1,2,3,4]]
+console.log(B)
+console.log(B[3])
+console.log(B[3][2])
+console.log(B[4][0])
+
+const g = Array.of("X","Z","K","P",9,5,6)
+console.log(g)
+
+const t = Array(100).fill(false)
+console.log(t)
+
+const e = new Array()
+console.log(e)
+
+const color = ["Rojo","Verde","Azul"]
+console.log(color)
+color.push("Amarillo")
+console.log(color)
+
+color.push("Negro")
+console.log(color)
+
+color.forEach(function(el,index){
+
+    console.log(`<li> id="${index}>{el}</li>`)
+})
+
+
+//SECCIÓN 12
+
+let a = new String("Hola")
+console.log(a)
+
+const mich = {
+    nombre:"Michel",
+    nombre2:"Melian",
+    annos:25,
+    pasatiempos:["Hacer ejercicio","correr","comer"],
+    soltero:true,
+    contacto:{
+        email:"michimelian@gmail.com",
+        twitter:"@michiforce",
+        movil:"54733229"
+
+    },
+saludar:function(){
+    console.log(`Hola :)`)
+},
+decirMiNombre: function(){
+    console.log(`Hola me llamo ${this.nombre} ${this.nombre2} y tengo ${this.annos} años y me puedes seguir en ${this.contacto.twitter} en twiter.`)
+}
+}
+
+console.log(mich)
+console.log(mich.annos)
+console.log(mich["nombre"])
+console.log(mich.nombre2)
+console.log(mich["nombre2"])
+console.log(mich.soltero)
+console.log(mich["pasatiempos"])
+console.log(mich.contacto.twitter)
+console.log(mich["pasatiempos"][1])
+mich.saludar()
+mich.decirMiNombre()
+
+//SECCIÓN 13 
+//Operadores
+
+let h = 5 + 5
+console.log(h)
+
+let i = 5 * 4 - 65
+console.log(i)
+
+console.log(4>3)
+console.log(4>6)
+console.log(8 <= 8)
+
+
+/*
+= 1 igual es asignación de variables
+== 2 iguales es comparación de valores
+=== 3 iguales es comparación de tipo de dato y de valor
+
+
+console.log(7==7)
+console.log("7"==7)
+console.log(0== false)
+
+console.log(7===7)
+console.log("7"===7)
+console.log(0=== false)
+
+ //Incremeento - Decremernto
+ let j = 3
+ //j = j + 3
+ //j /= 6
+ console.log(j++)
+ //Operador unario
+ j++
+ j--
+ ++j
+ --j
+console.log(j)
+
+/*Lógicos 
+Not: Niega, es decir lo que es verdadero lo vuelve falso y viceversa
+Or: Cuando tengo 2 o mas condiciones, con que se cumpla uno de los dos, el OR es verdadero
+&&--and: Cuando tengo dos o mas condiciones, todas tienen que cumplirse, es decir ser verdaderas 
+para que AND se valide.*/
+
+//SECCIÓN 14
+//mecanismos de control
+
+/* if - else 
+
+let edad = 17
+if(edad>17){
+    console.log("Eres mayor de edad")
+}else{
+    console.log("Eres menor de edad")
+}
+
+
+if(edad>=17){
+    console.log("Eres mayor de edad")
+}else{
+    console.log("Eres menor de edad")
+}
+
+/* if- else if else */
+
+/*Dejame dormir - 0hrs-5 hrs
+Buenos dias 6hrs- 11 hrs
+Buenas tardes 12hrs- 18 hrs
+Buenas noches 19hrs- 23 hrs
+
+let hora = 85
+if(hora >=0 && hora<=5 ){
+    console.log(("Dejenme dormir"))
+} else if(hora >=6 && hora<=11 ){
+    console.log("Buenos dias")}
+else if(hora >=12 && hora<=18 ){
+    console.log("Buenas Tardes")}
+    else if(hora >=19 && hora<=23){
+        console.log("Buenas Noches")}
+        else 
+        {console.log("La hora establecida no es correcta")}
+
+/*Operador ternario
+let eresMayor = (edad >= 18)
+?"Eres mayor de edad" 
+:"Eres menor de edad"
+console.log(eresMayor)       
+
+// switch -case
+/*
+domingo - 0
+lunes - 1
+martes -2
+miercoles -3
+jueves - 4
+viernes -5
+sabado - 6
+
+  
+  let dia = 0
+  switch (dia){
+    case 0: 
+    console.log("Domingo")
+    break
+    case 1: 
+    console.log("Lunes")
+    break
+    case 2: 
+    console.log("Martes")
+    break
+    case 3: 
+    console.log("Miercoles")
+    break
+    case 4: 
+    console.log("Jueves")
+    break
+    case 5: 
+    console.log("Viernes")
+    break
+    case 6: 
+    console.log("Sabado")
+    break
+    default:
+        console.log("El día no existe")
+    break
+  }*/
+
+
+    //SECCIÓN 15 Ciclos
+
+    /*let contador = 0   
+
+    while( contador < 10){
+        console.log(contador)
+        contador++}
+
+    do{
+        console.log("do While" + contador)
+        contador++
+       } while( contador < 10)
+            
+
+for(let i =0; i<10; i ++) {
+    console.log("for" + i)      
+
+}
+        
+    let numeros = [10,20,30,"L",40,50,60,70,80,90]    
+    
+    for(let i =0; i< numeros.length;i++){
+        console.log(numeros[i])
+    }
+
+    const michi ={
+        name:"Michi",
+        apellido:"Polanco",
+        edad:25
+    }
+
+    for(const propiedad in michi){
+        console.log(`Key: ${propiedad}, Values ${michi[propiedad]} `)
+    } 
+
+for(const elemento of numeros){
+    console.log(elemento)
+}
+// SECCION     16
+
+try{
+console.log("En el try se agrega el codigo a evaluar")
+noExiste
+console.log("Segundo mensaje en el try")
+
+}catch(error){
+    console.log("Catch, captura cualquier error capturado o lanzado por el try")
+    console.log(error)
+} finally{
+console.log("El bloque finally se ejecutara siempre al final de un bloque try-catch")
+}
+
+try{
+    let numero = "w"
+    noSale
+    if(isNaN(numero)){
+        throw new Error("El caracter introducido no es un numero")
+    }
+    console.log(numero*numero)
+}catch(error){
+    console.log(`Se produjo el siguiente error:${error}`)
+
+    
+}
+*/
+
+ //SECCIÓN 17 
+
+/*const numeros = [1,2,3,4,5,6,7,8,9,0]
+
+for(let i=0; i < numeros.length;i++){
+    if(i%2==1){
+        console.log(`Estos son los numeros pares:${numeros[i]}`)
+        
+    }  
+}
+
+
+const numeros = [1,2,3,4,5,6,7,8,9,0]
+
+for(let i=0;i< numeros.length;i++){
+    if(i===5){
+        break
+    }
+    console.log(numeros[i])
+}
+for(let i=0;i< numeros.length;i++){
+    if(i===5){
+        continue
+    }
+    console.log(numeros[i])
+}
+
+
+// SECCIÓN 18  Destructuración 
+
+const numeros =[1,2,3,4,5] 
+//Sin destructuracion
+ 
+let uno = numeros[0]
+    dos = numeros[1]
+    tres = numeros[2]
+    cuatro = numeros[3]
+
+    console.log(uno, dos, tres,cuatro)
+
+    //Con destruacturacion
+    const[one,two,three,four] = numeros
+    console.log(one,two,three,four)
+
+
+    //SECCION 19
+
+    let nombre = "Kira"
+    edad= 2
+
+    const perra={
+        nombre:nombre,
+        edad:edad, 
+        ladrar:function(){
+            console.log("miau, miau, miau")
+        }
+    }
+    console.log(perra)
+    perra.ladrar()
+
+    const dog={
+        nombre,
+        edad,
+        raza:"Pitbull",
+        ladrar(){
+            console.log("guau, guau, guau")
+        }
+    }
+    console.log(dog)
+    dog.ladrar()
+
+    //SECCIÓN 20
+
+    function sumar (a,b,... c){
+        let resultado = a + b
+
+        c.forEach(function(n){
+            resultado += n
+        })
+            return resultado}
+
+    console.log(sumar(3,4))
+    console.log(sumar(3,4,4))
+    console.log(sumar(3,4,4,5))
+
+
+    const arry1 =[1,2,3,4,5,]
+        arry2 =[6,7,8,9,0]
+
+      const array3 =[...arry1,... arry2]
+      console.log(array3) 
+
+//SECCIÓN 21
+
+        const saludar = nombre => console.log(`hola ${nombre}`)
+        saludar("rolo")
+
+        const sumar = (a,b) =>a + b
+
+        console.log(sumar(6,7))
+
+        const funcionDeVariasLineas = ()=>{
+            console.log("Uno")
+            console.log("Dos")
+            console.log("Tres")
+        }
+        
+        funcionDeVariasLineas()
+
+        const numeros = [1,2,3,4,5,6,7]
+
+        numeros.forEach((elemento,index)=>console.log(`El elemento ${elemento} esta en la posición ${index}`));
+
+
+        /*function perri (){
+            console.log(this) }
+        perri()
+
+        const perro = {
+            nombre:"Kira",
+            ladrar(){
+              console.log(this)
+            }
+        }
+        perro.ladrar()
+
+// SECCIÓN 22
+//Función constructora
+function Animal (nombre, genero){
+    //Atributos
+    this.nombre=nombre
+    this.genero=genero
+    //Metodos
+    this.sonar= function(){
+        console.log("Hago sonidos porque tengo boca")
+    }
+    this.saludar = function(){
+        console.log(`Hola me llamo ${this.nombre}`)
+    }
+}
+
+//Funcion constructora donde asignamos los metodos al prototipo, no a la funcion como tal
+function Animal (nombre, genero){
+    //Atributos
+    this.nombre=nombre
+    this.genero=genero}
+    //Metodos
+    Animal.prototype.sonar= function(){
+        console.log("Hago sonidos porque tengo boca")
+    }
+    Animal.prototype.saludar = function(){
+        console.log(`Hola me llamo ${this.nombre}`)
+    }
+
+// Herencia prototipica SECCIÓN 23
+function Perro(nombre,genero,tamanio){
+    this.super=Animal
+    this.super(nombre,genero)
+    this.tamanio=tamanio
+}
+    //Perro esta heredando de animal
+    Perro.prototype=new Animal()
+    Perro.prototype.constructor=Perro
+
+    //sobreescritura de metodos del prototipo padre en el hijo
+    Perro.prototype.sonar=function(){
+        console.log("Soy un perro y mi sonido es un ladrido")
+    }
+    Perro.prototype.ladrar=function(){
+        console.log("Guauu Guauu")
+    }
+
+    const snoopy =new Perro("Balto","Macho","Medio")
+    const robertoC =new Animal("Robert","Macho")
+
+    console.log(snoopy)
+    console.log(robertoC)
+
+    snoopy.sonar()
+    snoopy.saludar()
+    snoopy.ladrar()
+
+    robertoC.sonar()
+    robertoC.saludar()
+
+
+
+// SECCIÓN 24
+
+class Animal {
+    constructor(nombre,genero){
+        this.nombre=nombre
+        this.genero=genero
+        }
+
+    sonar (){
+        console.log("Hago sonidos porque tengo boca")
+    }
+    saludar (){
+        console.log(`Hola me llamo ${this.nombre}`)
+    }
+}
+
+    class Perro extends Animal{
+        constructor(nombre,genero,tamanio){
+            super(nombre,genero)
+            this.tamanio=tamanio
+            this.raza=null
+        }
+
+        sonar(){
+            console.log("Soy un perro y mi sonido es un ladrido")
+            }
+        ladrar(){
+            console.log("Guauu Guauu")
+            }
+        //SECCIÓN 25 
+            get getRaza(){
+                return this.raza
+            }
+            set setRaza(raza){
+                return this.raza=raza
+            }
+        //Hasta aqui la seccion 25
+            }
+
+
+    const mimi=new Animal("Mimi","Hembra")
+    sherk=new Perro("Sherk","Macho","Grande")
+
+    console.log(mimi)
+    mimi.saludar()
+    mimi.sonar()
+    console.log(sherk)
+    sherk.saludar()
+    sherk.sonar()
+    sherk.ladrar()
+    console.log(sherk.getRaza)
+    sherk.setRaza ="Zatoberman" 
+    console.log(sherk.getRaza)
+
+        //SECCION 26
+
+    console.error("esto es un error")
+    console.warn("Esto es un aviso")
+    console.info("Esto es un mensaje informativo")
+    console.log("Un registro de lo que ha pasado en nuestra aplicacion")
+
+
+    let nombre= "Michi"
+    let apellido= "Melian"
+    let edad =25
+    
+    console.log(nombre)
+    console.log(edad)
+    console.log(apellido)
+    console.log(`Hola mi nombre es ${nombre}, mi primer apellido es ${apellido} y tengo ${edad} años de edad`)
+    console.log(`Hola mi nombre es %s, mi primer apellido es %s y tengo %d años de edad`,nombre,apellido,edad)
+    console.group("Las partes de la bicicleta son")
+    console.log("Cuadro")
+    console.log("Timon")
+    console.log("Cadena")
+    console.log("Pedales")
+    console.log("Asiento")
+    console.groupEnd()
+
+    console.groupCollapsed("Las partes de la bicicleta son")
+    console.log("Cuadro")
+    console.log("Timon")
+    console.log("Cadena")
+    console.log("Pedales")
+    console.log("Asiento")
+    console.groupEnd()
+ 
+    console.log(console)
+    console.table(Object.entries(console).sort())
+    console.table(Object.entries(nombre).sort())
+    console.table(Object.entries(apellido))
+
+    const numeros=[1,2,3,4,5]
+       vocales=["a","e","i","o","u"]
+
+    console.table(numeros)
+    console.table(vocales)
+
+    console.time("Cuanto tiempo tarda mi codigo")
+    const arregol=Array(1000000)
+
+    for(i=0;i<arregol.length;i++){
+        arregol[i]=i
+    }
+
+    console.timeEnd("Cuanto tiempo tarda mi codigo")
+    //console.log(arregol)
+
+   
+for(let i=0;i<100;i++){
+    console.count("codigo For")
+    console.log(i)
+}
+
+console.clear()
+ 
+
+let x= 4
+   y=3
+   pruebaXY="Se espera que x sea siempre menor que y"
+
+   console.assert(x<=y,{x,y,pruebaXY})
+    console.clear()
+
+//SECCIÓN 27
+
+console.log(Date())
+ 
+let fecha=new Date()
+console.log(fecha)
+//dia del mes
+console.log(fecha.getDate())
+//Dia de la semana D L M M J V S
+console.log(`Dia de la semana expresado en número ${fecha.getDay()}`)
+//año
+console.log(`Año en que nos encontramos ${fecha.getFullYear()}`)
+ //mes
+ console.log(`Mes que nos encontramos ${fecha.getMonth()}`)
+ console.log(fecha.toDateString())
+ console.log(fecha.toLocaleString())
+ console.log(fecha.toLocaleDateString())
+ console.log(fecha.toLocaleTimeString())
+ console.log(fecha.getTimezoneOffset()) 
+ console.log(fecha.getUTCDate())
+ console.log(Date.now())
+    console.clear()
+ //SECCIÓN 28 (IMNECESARIO)
+//SECCIÓN 29
+ 
+ function saludar(nombre){
+  nombre=nombre || "Desconocido"
+  console.log(`Hola ${nombre}, cómo estas?`)
+ }
+    saludar("Ely")
+    saludar()
+
+    console.log("cadena" ||"Valor de la derecha" )
+    console.log( 19 ||"Valor de la derecha" )
+    console.log(true ||"Valor de la derecha" )
+    console.log([] ||"Valor de la derecha" )
+    console.log({} ||"Valor de la derecha" )
+    console.log(false ||"Valor de la derecha" )
+    console.log(null ||"Valor de la derecha" )
+    console.log(undefined ||"Valor de la derecha" )
+    console.log("" ||"Valor de la derecha" )
+    console.log(-2 ||"Valor de la derecha" )
+    console.log(0 ||"Valor de la derecha" )
+    
+    
+    console.log(false && "Valor de la derecha" )
+    console.log(null && "Valor de la derecha" )
+    console.log(undefined && "Valor de la derecha" )
+    console.log("" && "Valor de la derecha" )
+    console.log(-2 && "Valor de la derecha" )
+    console.log(0 && "Valor de la derecha" )
+  console.clear()
+
+//SECCIÓN 30
+    let alerta = alert("Esto es una alerta")
+    confirmacion = confirm("Esto es una confirmación")
+    aviso = prompt("Hola esto es un aviso y le permite al usuario ingresar un valor ")
+
+        console.log(alerta)
+        console.log(confirmacion)
+        console.log(aviso)
+
+//SECCION 31
+
+
+let cadena = `lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+Officiis eveniet voluptatibu corrupti consequuntur ut sint explicabo 
+facere temporibus vel nostrum corporis repellendus veniam quidem, 
+excepturi doloremque esse. Consequuntur, consectetur sunt!`
+
+/*let expReg = new RegExp("lorem","ig")
+console.log(expReg.test(cadena))
+console.log(expReg.exec(cadena))
+
+
+let expReg2 = /lorem{1}/ig
+console.log(expReg2.test(cadena))
+console.log(expReg2.exec(cadena))
+
+
+//SECCION 32
+
+//Función anonima autoejecutable
+
+//Clasica
+(function (){
+    console.log("Version clasica")
+})();
+
+//LA Crockford
+((function (){
+    console.log("version Crockford")
+})());
+
+//Unaria
++function() {
+    console.log("Version unaria")
+}();
+
+//Facebook
+!function(){
+    console.log("version facebook")
+}();
+
+//SECCIÓN 33*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>    
+
+</body>
+
+
+</html>

@@ -1,0 +1,15 @@
+{
+    "cadena":"Michi",
+    "numero":"25",
+    "booleano":"true",
+    "arreglo":["correr","programar","cosinar"],
+    "objeto":{
+        "twitter":"@michiforce",
+        "email":"michelmelianp@gmail.com"
+    },
+    "nulo":null
+    
+}
+
+
+
